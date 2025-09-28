@@ -12,13 +12,6 @@ int main () {
 
     std::cin >> N;
 
-    // How to evaluate precision of formula
-    // for (int i = 1; i <= N; i++) {
-    //     std::cout << fibonacci_number_calculator(i) << ' ';
-    // }
-
-    // std::cout << '\n';
-
     std::cout << fibonacci_number_calculator (N) << '\n';
     std::cout << "Correct: " << fibonacci_number_calculator_eval (N) << '\n';
 
