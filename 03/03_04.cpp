@@ -63,6 +63,7 @@ public:
 
     static void test () {
 
+        std::cout << "Tester_v1::test" << '\n';
         Attorney_1::test_v1 ();
     }
 };
@@ -73,6 +74,7 @@ public:
 
     static void test () {
 
+        std::cout << "Tester_v2::test" << '\n';
         Attorney_2::test_v2 ();
     }
 };
@@ -80,5 +82,8 @@ public:
 int main () {
 
     [[maybe_unused]] Entity entity;
+
+    Tester_v1 tester_1;
+    tester_1.test();
     return 0;
 }
