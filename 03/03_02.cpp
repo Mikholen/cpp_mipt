@@ -87,8 +87,10 @@ bool triangle_tests () {
     Triangle    triangle_3 (7, 8, 9);
 
     if (is_close (triangle_1.area(), 6.0)  && is_close (triangle_1.perimeter (), 12.0)   &&
-        is_close (triangle_2.area(), 18.0) && is_close (triangle_2.perimeter (), 15.588) &&
-        is_close (triangle_3.area(), 24.0) && is_close (triangle_3.perimeter (), 26.833))  return true;
+        is_close (triangle_2.area(), 15.588) && is_close (triangle_2.perimeter (), 18.0) &&
+        is_close (triangle_3.area(), 26.833) && is_close (triangle_3.perimeter (), 24.0))  
+        
+        return true;
 
     return false;
 }
@@ -121,7 +123,7 @@ bool circle_tests () {
 
 bool tests () {
 
-    return (triangle_tests() && square_tests () && circle_tests ());
+    return (triangle_tests () && square_tests () && circle_tests ());
 }
 
 int main () {
