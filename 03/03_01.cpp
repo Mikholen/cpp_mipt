@@ -1,6 +1,7 @@
 #include <cmath>
 #include <vector>
 #include <cassert>
+#include <iostream>
 
 struct Rectangle {
 
@@ -18,7 +19,7 @@ int get_coords_of_shared_area (const Rectangle &rect_1, const Rectangle &rect_2,
     int bottom  = std::min (rect_1.lower_right_y, rect_2.lower_right_y);
 
     int width  = right - left;
-    int height = top - bottom;
+    int height = bottom - top;
 
     if (width < 0 || height < 0) {
 
@@ -35,7 +36,7 @@ int get_coords_of_shared_area (const Rectangle &rect_1, const Rectangle &rect_2,
 
 void get_least_bounding_rect (const Rectangle &rect_1, const Rectangle &rect_2, Rectangle &bounding_rect) {
 
-    bounding_rect.upper_left_x    = std::min (rect_1.upper_left_x,  rect_2.upper_left_x);
+    bounding_rect.upper_left_x   = std::min (rect_1.upper_left_x,  rect_2.upper_left_x);
     bounding_rect.lower_right_x  = std::max (rect_1.lower_right_x, rect_2.lower_right_x);
     bounding_rect.upper_left_y   = std::min (rect_1.upper_left_y,  rect_2.upper_left_y);
     bounding_rect.lower_right_y  = std::max (rect_1.lower_right_y, rect_2.lower_right_y);
@@ -76,7 +77,7 @@ bool test_1 () {
     Rectangles.push_back(Rectangle{2, 2, 6, 3});
 
     int area = 0;
-    Rectangle bounding_rect = Rectangle{};
+    Rectangle bounding_rect = Rectangles[0];
     Rectangle bound_true = Rectangle{0, 0, 6, 5};
     get_area_and_bounding (Rectangles, area, bounding_rect);
 
@@ -93,7 +94,7 @@ bool test_2 () {
     Rectangles.push_back(Rectangle{0, 6, 2, 8});
 
     int area = 0;
-    Rectangle bounding_rect = Rectangle{};
+    Rectangle bounding_rect = Rectangles[0];
     Rectangle bound_true = Rectangle{0, 0, 8, 8};
     get_area_and_bounding (Rectangles, area, bounding_rect);
 
@@ -108,23 +109,23 @@ bool test_3 () {
     Rectangles.push_back(Rectangle{3, 3, 7, 4});
     Rectangles.push_back(Rectangle{2, 2, 6, 6});
 
-    int area = 2;
-    Rectangle bounding_rect = Rectangle{};
+    int area = 0;
+    Rectangle bounding_rect = Rectangles[0];
     Rectangle bound_true = Rectangle{1, 1, 7, 6};
     get_area_and_bounding (Rectangles, area, bounding_rect);
 
-    if ((area == 0) && match_rect (bounding_rect, bound_true)) return true;
+    if ((area == 2) && match_rect (bounding_rect, bound_true)) return true;
     else                                                                  return false;
 }
 
 bool tests () {
 
-    return (test_1() && test_2() && test_3());
+    return (test_1 () && test_2 () && test_3 ());
 }
 
 int main () {
 
-    assert (tests());
+    assert (tests ());
 
     return 0;
 }
