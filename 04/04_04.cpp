@@ -130,6 +130,8 @@ void tests () {
 
 	Vector vector_4 = std::move (vector_3);
 
+	Vector vector_5 = { 2.7, 8. , 9.0, 5.4 };
+
 	vector_3 = vector_2;
 
 	vector_4 = std::move (vector_3);
