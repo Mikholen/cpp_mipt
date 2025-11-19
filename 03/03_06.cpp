@@ -109,6 +109,11 @@ bool triangle_tests () {
         return true;
     }
 
+    for (auto triangle : triangles) {
+
+        delete triangle;
+    }
+
     return false;
 }
 

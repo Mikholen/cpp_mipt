@@ -117,6 +117,7 @@ public :
 
     }
 
+
 //  -------------------------------------------------------------------------------------------
 
 	friend auto & operator>>(std::istream & stream, Rational & rational)
