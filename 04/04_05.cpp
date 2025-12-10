@@ -29,4 +29,6 @@ int main () {
     static_assert (F_val <3> == 2);
     static_assert (F_val <5> == 5);
     static_assert (F_val <7> == 13);
+
+    return 0;
 }
