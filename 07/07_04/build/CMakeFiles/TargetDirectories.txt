@@ -1,0 +1,4 @@
+/mnt/c/Users/HONOR/Documents/Проекты/cpp_mipt/07/07_04/build/CMakeFiles/sort_test.dir
+/mnt/c/Users/HONOR/Documents/Проекты/cpp_mipt/07/07_04/build/CMakeFiles/test.dir
+/mnt/c/Users/HONOR/Documents/Проекты/cpp_mipt/07/07_04/build/CMakeFiles/edit_cache.dir
+/mnt/c/Users/HONOR/Documents/Проекты/cpp_mipt/07/07_04/build/CMakeFiles/rebuild_cache.dir
