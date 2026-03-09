@@ -1,0 +1,5 @@
+/mnt/c/Users/HONOR/Documents/Проекты/cpp_mipt/06/06_05/build/CMakeFiles/loader.dir
+/mnt/c/Users/HONOR/Documents/Проекты/cpp_mipt/06/06_05/build/CMakeFiles/test_v1.dir
+/mnt/c/Users/HONOR/Documents/Проекты/cpp_mipt/06/06_05/build/CMakeFiles/test_v2.dir
+/mnt/c/Users/HONOR/Documents/Проекты/cpp_mipt/06/06_05/build/CMakeFiles/edit_cache.dir
+/mnt/c/Users/HONOR/Documents/Проекты/cpp_mipt/06/06_05/build/CMakeFiles/rebuild_cache.dir
