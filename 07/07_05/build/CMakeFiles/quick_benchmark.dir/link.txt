@@ -1,0 +1,1 @@
+/usr/bin/c++ CMakeFiles/quick_benchmark.dir/quick_benchmark.cpp.o -o quick_benchmark  /usr/local/lib/libbenchmark.a /usr/local/lib/libbenchmark_main.a /usr/local/lib/libbenchmark.a -lrt 

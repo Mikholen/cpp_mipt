@@ -1,0 +1,3 @@
+/mnt/c/Users/HONOR/Documents/Проекты/cpp_mipt/07/07_05/build/CMakeFiles/quick_benchmark.dir
+/mnt/c/Users/HONOR/Documents/Проекты/cpp_mipt/07/07_05/build/CMakeFiles/edit_cache.dir
+/mnt/c/Users/HONOR/Documents/Проекты/cpp_mipt/07/07_05/build/CMakeFiles/rebuild_cache.dir
