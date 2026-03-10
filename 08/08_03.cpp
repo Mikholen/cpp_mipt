@@ -1,5 +1,8 @@
 #include <cstdint>
 #include <cassert>
+#include <vector>
+#include <cmath>
+#include <iostream>
 
 int floor_log2_int(int n) {
     if (n <= 0) return -1;
@@ -42,7 +45,7 @@ int floor_log2_float(float x) {
             mantissa >>= 1;
             ++shift;
         }
-        return -126 + shift;
+        return -126 + shift; // 126 is not correct, 149 is 
     }
     
     return exponent - 127;
@@ -71,5 +74,44 @@ int main() {
     assert(floor_log2_float(0.0f) == -1);
     assert(floor_log2_float(-1.0f) == -1);
     
+    
+	std::vector<double> vector_double
+    {
+		3.145293e-40, // Failed
+		1e-44, // Failed
+		7.1746481e-43, // Failed
+		3.145293e-25,
+		3.145293e-2,
+		3.145293e2,
+		3.145293e4,
+		3.145293e35,
+		5.4210109e-20,
+		0.25,
+		1,
+		1024,
+		1.8446744e+19
+	};
+	
+	std::vector<float> vector_float;
+	for(const auto x_double: vector_double)
+	{
+		vector_float.push_back(x_double);
+	}
+	
+	for(const auto x_float: vector_float)
+	{
+		const int answer_custom = floor_log2_float(x_float);
+		const int answer_std = std::floor(std::log2(x_float));
+		
+		std::cout << (answer_custom == answer_std ? "passed" : "failed") << " " << x_float << std::endl;
+		std::cout << "custom = " << answer_custom << ", std-ans = " << answer_std << "\n" << std::endl;
+	}
+	
     return 0;
 }
+
+/*
+ * Score is 6/10
+ * Subnormal case not working properly 
+ * Did not include test cases to check subnormal cases
+ */
