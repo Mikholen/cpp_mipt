@@ -131,6 +131,13 @@ void demonstrate_std_exceptions() {
     } catch (const std::bad_variant_access& e) {
         std::cerr << "std::bad_variant_access: " << e.what() << "\n";
     }
+    
+    /*
+     * Missing
+     * std::bad_alloc,
+     * std::length_error
+     * std::out_of_range
+     */
 }
 
 
@@ -159,6 +166,6 @@ int main() {
     }
     
     demonstrate_std_exceptions();
-    
+    // Add general catch (...) here too
     return 0;
 }
