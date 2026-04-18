@@ -126,3 +126,5 @@ int main()
     std::cout << std::ranges::is_sorted(v2) << "\n";
     std::cout << std::ranges::is_sorted(v3) << "\n";
 }
+
+// Score is 9/10

@@ -61,6 +61,7 @@ std::size_t h7(const std::string &s)
     return seed;
 }
 
+// better to  use unsigned int over size_t
 std::size_t h8(const std::string &s)
 {
     return std::accumulate(s.begin(), s.end(), 0u);
@@ -74,7 +75,7 @@ std::size_t h9(const std::string &s)
     return seed;
 }
 
-
+// What functions are these? The task is to take the 9 functions from here: https://www.partow.net/programming/hashfunctions/index.html
 
 using HashFunc = std::size_t(*)(const std::string &);
 
@@ -82,7 +83,7 @@ std::vector<HashFunc> funcs = {
     h1,h2,h3,h4,h5,h6,h7,h8,h9
 };
 
-std::string gen_string(int i)
+std::string gen_string(int i) // You need to make a string with a-z characters, you need to pick the function from the Template: https://github.com/i-s-m-mipt/Education/blob/master/projects/examples/source/10.42.cpp
 {
     return "str_" + std::to_string(i * 2654435761u);
 }
@@ -90,7 +91,7 @@ std::string gen_string(int i)
 
 std::size_t count_collisions(HashFunc f, int N)
 {
-    std::unordered_set<std::size_t> set;
+    std::unordered_set<std::size_t> set; // task said to use 32 bit only, better to use unsigned int 
     std::size_t collisions = 0;
 
     for (int i = 0; i < N; ++i)
@@ -119,5 +120,12 @@ int main()
         out << "\n";
     }
 
-    std::cout << "Data written to hash_data.csv\n";
+    std::cout << "Data written to hash_data.csv\n"; // You need to attach python code
+    // Use the python code to plot the hash_data.csv
+    // Attach the .png file
+    // And in this code write the analysis and conclusion
+    // Comparing different names not h1 h2 h3 ... h9
 }
+
+// Score is 3/10
+// You can resubmit and get upto 8/10, if you want

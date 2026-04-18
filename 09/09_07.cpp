@@ -95,3 +95,5 @@ int main() {
     Entity e2 = std::move(e);
     e2.test();
 }
+
+// score is 9/10
