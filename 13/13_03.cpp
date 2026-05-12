@@ -74,3 +74,5 @@ Third line
         "line\n"
     );
 }
+
+// Score is 9/10
